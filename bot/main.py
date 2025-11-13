@@ -614,4 +614,9 @@ async def main():
     await client.run_until_disconnected()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        log.info("Stopping...")
+        use_random_interval = False
+        spamming = False
