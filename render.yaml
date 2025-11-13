@@ -7,6 +7,7 @@ services:
     startCommand: "bash start.sh"
     autoDeploy: true
     envVars:
-      API_ID: "your_api_id"
-      API_HASH: "your_api_hash"
-      ADMIN_ID: "8409633329"
+      API_ID: "24332704"
+      API_HASH: "8fb6431a21aed74c770c79c8eb4b9616"
+      ADMIN_ID: "8480948917"
+      SESSION: "spam_session"
