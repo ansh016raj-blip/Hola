@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: takers-slave-userbot
+    env: python
+    plan: starter
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
+    autoDeploy: true
+    envVars:
+      API_ID: "your_api_id"
+      API_HASH: "your_api_hash"
+      ADMIN_ID: "8409633329"
