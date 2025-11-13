@@ -1,13 +1,18 @@
 services:
-  - type: worker
+  - type: web
     name: takers-slave-userbot
-    env: python
-    plan: starter
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "bash start.sh"
+    env: docker
+    plan: free
     autoDeploy: true
+
+    buildCommand: ""
+    startCommand: ""
+
     envVars:
-      API_ID: "24332704"
-      API_HASH: "8fb6431a21aed74c770c79c8eb4b9616"
-      ADMIN_ID: "8480948917"
-      SESSION: "spam_session"
+      API_ID: 24332704
+      API_HASH: 8fb6431a21aed74c770c79c8eb4b9616
+      ADMIN_ID: 8480948917
+      SESSION: spam_session
+
+    build:
+      dockerfilePath: Dockerfile
